@@ -6,7 +6,13 @@ import pandas as pd
 API_DATA = 'public/api_data.json'
 
 
-def get_apod_data(start_date):
+def get_apod_data(start_date) -> pd.DataFrame:
+    """
+    Get APOD data from the API
+
+    :param start_date: The date to start the search
+    :return: A DataFrame with the APOD data
+    """
     api_data = pd.read_json(API_DATA, typ='series')
 
     url = api_data['api_url']

@@ -15,9 +15,8 @@ class TestHandler():
         assert os.path.exists(IMAGE_PATH)
 
     def test_download_image_exists(self):
-        with pytest.raises(FileExistsError):
-            download_image(file_path=IMAGE_PATH,
-                           url=TEST_IMAGE)
+        download_image(file_path=IMAGE_PATH,
+                       url=TEST_IMAGE)
 
-        # clean up
-        os.remove(IMAGE_PATH)
+        assert download_image(file_path=IMAGE_PATH,
+                              url=TEST_IMAGE) == f"File {IMAGE_PATH} already exists. Skipping download."

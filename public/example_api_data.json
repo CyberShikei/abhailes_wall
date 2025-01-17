@@ -1,0 +1,7 @@
+{
+    "api_url": "https://api.nasa.gov",
+    "api_key": "",
+    "endpoint": "planetary/apod",
+    "params": {}
+}
+

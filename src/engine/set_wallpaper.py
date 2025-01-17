@@ -4,6 +4,10 @@ import subprocess
 
 
 def __set_wallpaper_fit():
+    """
+    Set the wallpaper to fit the screen.
+    """
+
     subprocess.run([
         "gsettings",
         "set",
@@ -16,6 +20,14 @@ def __set_wallpaper_fit():
 
 
 def set_wallpaper(image_path, fit=False):
+    """
+    Set the wallpaper to the image at the given path.
+
+    :param image_path: The path to the image to set as the wallpaper.
+    :param fit: Whether to fit the wallpaper to the screen.
+
+    :return: True if the wallpaper was set successfully.
+    """
     if not __does_picture_exist(image_path):
         raise Exception("Image does not exist")
 

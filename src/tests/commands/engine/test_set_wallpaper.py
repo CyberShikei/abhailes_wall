@@ -1,6 +1,6 @@
 import pytest
 
-from src.engine import set_wallpaper
+from src.commands import set_wallpaper
 
 TEST_DIR = "public/test_images/"
 

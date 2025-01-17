@@ -1,6 +1,6 @@
 import pytest
 
-from src.collectors import APICollector
+from src.commands import APICollector
 
 BASE_URL = "https://api.thecatapi.com/v1"
 

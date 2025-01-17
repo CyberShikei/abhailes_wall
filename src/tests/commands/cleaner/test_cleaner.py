@@ -1,7 +1,7 @@
 import pytest
 import os
 
-from src.cleaner import data_to_file, read_json
+from src.commands import data_to_file, read_json
 
 TEST_DATA = {'key': 'value'}
 

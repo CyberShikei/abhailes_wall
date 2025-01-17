@@ -4,7 +4,7 @@ import os
 from src.handler import download_image
 
 TEST_IMAGE = "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
-IMAGE_PATH = "public/images/image_that_should_not_exist.jpg"
+IMAGE_PATH = "public/test_images/image_that_should_not_exist.jpg"
 
 
 class TestHandler():

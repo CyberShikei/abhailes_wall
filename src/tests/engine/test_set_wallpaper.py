@@ -1,6 +1,6 @@
 import pytest
 
-from src.engine.set_wallpaper import set_wallpaper
+from src.engine import set_wallpaper
 
 
 class TestSetWall():

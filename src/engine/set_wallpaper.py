@@ -12,6 +12,8 @@ def __set_wallpaper_fit():
         "scaled"
     ])
 
+# TODO: Implement OS detection for Windows and MacOS
+
 
 def set_wallpaper(image_path, fit=False):
     if not __does_picture_exist(image_path):

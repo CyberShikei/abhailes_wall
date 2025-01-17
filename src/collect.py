@@ -30,3 +30,9 @@ def get_apod_images(data: pd.DataFrame):
     images = data[data['media_type'] == 'image']
 
     return images
+
+
+def get_random_image(start_date):
+    data = get_apod_data(start_date)
+
+    return data.sample()

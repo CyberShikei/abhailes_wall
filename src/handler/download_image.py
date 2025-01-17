@@ -7,6 +7,7 @@ def download_image(file_path='images/image.jpg', url=None):
     if os.path.exists(file_path):
         msg = f"File {file_path} already exists. Skipping download."
         raise FileExistsError(msg)
+
     # Send a GET request to the URL
     response = requests.get(url)
     # Open a file in write-binary mode and save the image

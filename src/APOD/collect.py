@@ -1,6 +1,6 @@
 # !venv/bin/python3
 from src.collectors import APICollector
-from src.collectors.cleaner import read_json
+from src.cleaner import read_json
 
 API_DATA = 'public/api_data.json'
 

@@ -1,6 +1,8 @@
 # abhailes_wall
 Wallpaper engine utilising NASA's APOD (Astronomy Picture Of The Day)
 
+**(`src/engine/set_wallpaper.py` CURRENTLY ONLY SUPPORTS THE GNOME DESKTOP ENVIRONMENT)**
+
 ## Setup
 1. Clone the repository
 2. Get an API key from NASA's API

@@ -1,6 +1,7 @@
 import pandas as pd
 
 from collect import get_apod_data
+from engine import set_wallpaper
 
 
 def main():

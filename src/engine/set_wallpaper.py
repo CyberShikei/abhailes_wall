@@ -3,7 +3,7 @@ import sys
 import subprocess
 
 
-def set_wallpaper_fit():
+def __set_wallpaper_fit():
     subprocess.run([
         "gsettings",
         "set",
@@ -14,7 +14,7 @@ def set_wallpaper_fit():
 
 
 def set_wallpaper(image_path, fit=False):
-    if not does_picture_exist(image_path):
+    if not __does_picture_exist(image_path):
         raise Exception("Image does not exist")
 
     system = sys.platform
@@ -34,12 +34,12 @@ def set_wallpaper(image_path, fit=False):
         raise Exception(f"Unsupported OS: {system}")
 
     if fit:
-        set_wallpaper_fit()
+        __set_wallpaper_fit()
 
     return True
 
 
-def does_picture_exist(image_path):
+def __does_picture_exist(image_path):
     return os.path.exists(image_path)
 
 

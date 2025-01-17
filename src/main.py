@@ -1,7 +1,6 @@
 import pandas as pd
 
-from APOD import get_apod_data
-from datetime import datetime, timedelta
+from collect import get_apod_data
 
 
 def main():

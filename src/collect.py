@@ -1,6 +1,6 @@
 # !venv/bin/python3
-from src.collectors import APICollector
-from src.cleaner import read_json
+from collectors import APICollector
+from cleaner import read_json
 
 API_DATA = 'public/api_data.json'
 
@@ -11,6 +11,8 @@ def get_apod_data(start_date):
     url = api_data['api_url']
     endpoint = api_data['endpoint']
     params = api_data['params']
+
+    params['start_date'] = start_date
 
     collector = APICollector(url, default_params=params)
 

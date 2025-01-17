@@ -1,6 +1,6 @@
 import pytest
 
-from src.APOD import get_apod_data
+from src.collect import get_apod_data
 
 
 class TestAPOD():

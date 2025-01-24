@@ -2,3 +2,4 @@ __pycache__/
 venv/
 api_data.json
 images/*
+cache/*

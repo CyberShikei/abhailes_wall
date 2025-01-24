@@ -3,7 +3,7 @@
 import json
 
 
-def data_to_file(json_string, file_name):
+def write_json(json_string, file_name):
     """
     Writes JSON data to a file.
 

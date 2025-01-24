@@ -1,7 +1,7 @@
 import pytest
 import os
 
-from src.commands import data_to_file, read_json
+from src.commands import write_json, read_json
 
 TEST_DATA = {'key': 'value'}
 
@@ -12,7 +12,7 @@ class TestCleaner():
     def test_data_to_file(self):
         data = TEST_DATA
 
-        assert data_to_file(data, TEST_FILE)
+        assert write_json(data, TEST_FILE)
 
     def test_read_json(self):
         data = read_json(TEST_FILE)

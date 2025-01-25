@@ -6,25 +6,31 @@ import sys
 
 
 def __parse_args(args):
+    today = datetime.datetime.now()
+    start_date = today.date().strftime("%Y-%m-%d")
+    auto_save = True
     if len(args) > 1:
         for arg in args:
             if arg == "--days":
                 try:
                     days = int(args[args.index(arg) + 1])
-                    today = datetime.datetime.now()
-                    start_date = today - datetime.timedelta(days=days)
+                    start_date = (today - datetime.timedelta(days=days)
+                                  ).date().strftime("%Y-%m-%d")
 
-                    set_wall_to_apod(start_date)
                 except ValueError:
                     print("Invalid argument for --days")
                     sys.exit(1)
                 except IndexError:
                     print("No argument found for --days")
                     sys.exit(1)
+            if arg == "--no-auto-save":
+                auto_save = False
             if arg == "--help":
                 __print_help()
 
+        set_wall_to_apod(start_date, auto_save)
         return True
+
     return False
 
 

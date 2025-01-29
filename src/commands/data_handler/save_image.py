@@ -1,7 +1,7 @@
 import os
 
 
-def save_image(url_response, path, overwrite=False):
+def save_image(url_response, path, overwrite=True):
     """Save an image to a file.
 
     Args:
